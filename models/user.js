@@ -26,3 +26,4 @@ module.exports = (sequelize, DataTypes) => {
 };
 
 //this is user model
+// this is another comment.
