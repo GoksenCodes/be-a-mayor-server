@@ -30,14 +30,14 @@ module.exports = (sequelize, DataTypes) => {
       },
       inStock: {
         type: DataTypes.BOOLEAN,
-        defaultValue: true
+        allowNull: false
       }
     },
     {}
   );
 
   city.associate = function(models) {
-    bid.belongsTo(models.user);
+    city.belongsTo(models.user);
   };
   return city;
 };
