@@ -15,12 +15,13 @@ module.exports = (sequelize, DataTypes) => {
       password: {
         type: DataTypes.STRING,
         allowNull: false
-      }
+      },
+      isOwner: DataTypes.BOOLEAN
     },
     {}
   );
   user.associate = function(models) {
-    // associations can be defined here
+    user.hasMany(models.city);
   };
   return user;
 };
