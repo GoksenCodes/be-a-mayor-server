@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const City = require("../models").city;
-
+const auth = require("../auth/middleware");
 const router = new Router();
 
 router.get("/", async (req, res) => {
@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
   res.status(200).json(allCities);
 });
 
+console.log("hello");
 router.get("/:id", async (req, res) => {
   const city = await City.findOne({
     where: { id: req.params.id },
