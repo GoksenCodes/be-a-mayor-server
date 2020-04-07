@@ -6,7 +6,8 @@ module.exports = {
       {
         userId: 1,
         name: "Amsterdam",
-        imageUrl: "https://unsplash.com/photos/t2hgHV1R7_g",
+        imageUrl:
+          "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
         country: "Netherlands",
         continent: "Europe",
         description:
@@ -20,7 +21,8 @@ module.exports = {
       {
         userId: 1,
         name: "Moscow",
-        imageUrl: "https://unsplash.com/photos/5V36D5JYcZA",
+        imageUrl:
+          "https://images.unsplash.com/photo-1545761931-0d597948c4c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
         country: "Russia",
         continent: "EuroAsia",
         description:
@@ -34,7 +36,8 @@ module.exports = {
       {
         userId: 1,
         name: "Toronto",
-        imageUrl: "https://unsplash.com/photos/VL-OvBppmzI",
+        imageUrl:
+          "https://images.unsplash.com/photo-1526417501781-5e7e587b7686?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
         country: "Canada",
         continent: "North America",
         description:
@@ -48,7 +51,8 @@ module.exports = {
       {
         userId: 1,
         name: "Melbourne",
-        imageUrl: "https://unsplash.com/photos/H54c-6zu_BU",
+        imageUrl:
+          "https://images.unsplash.com/photo-1544418819-ce642b5fb761?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
         country: "Australia",
         continent: "Australia",
         description:
@@ -62,7 +66,8 @@ module.exports = {
       {
         userId: 2,
         name: "Madrid",
-        imageUrl: "https://unsplash.com/photos/WBGjg0DsO_g",
+        imageUrl:
+          "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
         country: "Spain",
         continent: "Europe",
         description:
@@ -76,7 +81,8 @@ module.exports = {
       {
         userId: 2,
         name: "Seoul",
-        imageUrl: "https://unsplash.com/photos/HjsWTyyVDgg",
+        imageUrl:
+          "https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1870&q=80",
         country: "South Korea",
         continent: "Asia",
         description:
