@@ -154,9 +154,6 @@ app.use("/", authRouter);
 const cityRouter = require("./routers/city");
 app.use("/cities", cityRouter);
 
-const addrouter = require("./routers/city");
-app.use("/addacity", addrouter);
-
 // Listen for connections on specified port (default is port 4000)
 const { PORT } = require("./config/constants");
 
