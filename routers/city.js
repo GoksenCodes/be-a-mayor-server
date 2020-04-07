@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const City = require("../models").city;
-
+const auth = require("../auth/middleware");
 const router = new Router();
 
 router.get("/", async (req, res) => {
