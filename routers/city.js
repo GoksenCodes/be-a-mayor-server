@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
   res.status(200).json(allCities);
 });
 
+console.log("hello");
 router.get("/:id", async (req, res) => {
   const city = await City.findOne({
     where: { id: req.params.id },
