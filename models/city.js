@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   city.associate = function(models) {
-    // associations can be defined here
+    bid.belongsTo(models.user);
   };
   return city;
 };
