@@ -21,12 +21,14 @@ router.get("/:country/:continent/:minvalue/:maxvalue", async (req, res) => {
         filteredCities = await City.findAll({
           where: { 
             country: req.params.country, 
+            population: { [Op.between]: [req.params.minvalue, req.params.maxvalue] }
           }
         });
     } else if(req.params.country === "all" && req.params.continent !== "all") {
         filteredCities = await City.findAll({
           where: { 
             continent: req.params.continent,
+            population: { [Op.between]: [req.params.minvalue, req.params.maxvalue] }
           }
         });
     } else if(req.params.country === "all" && req.params.continent === "all") {
@@ -40,6 +42,7 @@ router.get("/:country/:continent/:minvalue/:maxvalue", async (req, res) => {
           where: { 
             continent: req.params.continent,
             country: req.params.country,
+            population: { [Op.between]: [req.params.minvalue, req.params.maxvalue] }
           }
         });
     } 
