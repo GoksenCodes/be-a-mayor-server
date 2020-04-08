@@ -16,7 +16,7 @@ module.exports = {
         price: 290,
         inStock: true,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         userId: 1,
@@ -31,7 +31,7 @@ module.exports = {
         price: 500,
         inStock: true,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         userId: 1,
@@ -46,7 +46,7 @@ module.exports = {
         price: 350,
         inStock: false,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         userId: 1,
@@ -61,7 +61,7 @@ module.exports = {
         price: 380,
         inStock: false,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         userId: 2,
@@ -76,7 +76,7 @@ module.exports = {
         price: 250,
         inStock: true,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         userId: 2,
@@ -91,12 +91,12 @@ module.exports = {
         price: 600,
         inStock: true,
         createdAt: new Date(),
-        updatedAt: new Date()
-      }
+        updatedAt: new Date(),
+      },
     ]);
   },
 
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete("cities", null, {});
-  }
+  },
 };
