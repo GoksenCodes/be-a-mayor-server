@@ -68,7 +68,8 @@ router.get("/:id", async (req, res) => {
 
 //Post add a City
 
-router.post("/addacity", auth, async (req, res) => {
+
+router.post("/", auth, async (req, res) => {
   try {
     const newCity = await City.create(req.body);
     console.log(newCity.dataValues);
