@@ -23,6 +23,12 @@ router.get("/:country/:continent/", async (req, res) => {
           country: req.params.country, 
         }
       });
+    } else if(req.params.country === 'all' && req.params.continent !== 'all') {
+      filteredCities = await City.findAll({
+        where: { 
+          continent: req.params.continent,
+        }
+      });
     } 
     return res.status(200).json(filteredCities);
   }
