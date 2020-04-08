@@ -14,35 +14,41 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:country/:continent/:minvalue/:maxvalue", async (req, res) => {
+router.get("/:country/:continent/:population/:price", async (req, res) => {
   try {
+    const { country, continent, population, price } = req.params;
+    
     let filteredCities;
-    if(req.params.country !== "all" && req.params.continent === "all") {
+    if(country !== "all" && continent === "all") {
         filteredCities = await City.findAll({
           where: { 
-            country: req.params.country, 
-            population: { [Op.between]: [req.params.minvalue, req.params.maxvalue] }
+            country: country, 
+            population: { [Op.gte]: population },
+            price: { [Op.lte]: price }
           }
         });
-    } else if(req.params.country === "all" && req.params.continent !== "all") {
+    } else if(country === "all" && continent !== "all") {
         filteredCities = await City.findAll({
           where: { 
-            continent: req.params.continent,
-            population: { [Op.between]: [req.params.minvalue, req.params.maxvalue] }
+            continent: continent,
+            population: { [Op.gte]: population },
+            price: { [Op.lte]: price }
           }
         });
-    } else if(req.params.country === "all" && req.params.continent === "all") {
+    } else if(country === "all" && continent === "all") {
         filteredCities = await City.findAll({
           where: {
-            population: { [Op.between]: [req.params.minvalue, req.params.maxvalue] }
+            population: { [Op.gte]: population },
+            price: { [Op.lte]: price }
           }
         })
     } else {
         filteredCities = await City.findAll({
           where: { 
-            continent: req.params.continent,
-            country: req.params.country,
-            population: { [Op.between]: [req.params.minvalue, req.params.maxvalue] }
+            continent: continent,
+            country: country,
+            population: { [Op.gte]: population },
+            price: { [Op.lte]: price }
           }
         });
     } 
