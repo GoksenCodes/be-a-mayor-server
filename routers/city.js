@@ -17,10 +17,9 @@ router.get("/", async (req, res) => {
 router.get("/:country/:continent/:population/:price", async (req, res) => {
   try {
     const { country, continent, population, price } = req.params;
-    console.log('req.params: ', country, continent, population, price)
+    
     let filteredCities;
     if(country !== "all" && continent === "all") {
-      console.log('INSIDE IF SCOPE!: ', 1)
         filteredCities = await City.findAll({
           where: { 
             country: country, 
@@ -29,12 +28,6 @@ router.get("/:country/:continent/:population/:price", async (req, res) => {
           }
         });
     } else if(country === "all" && continent !== "all") {
-      console.log('INSIDE IF SCOPE!: ', 2)
-      console.log(`INSIDE IF SCOPE: 
-        continent: ${continent}
-        population: ${population}
-        price: ${price}
-      `)
         filteredCities = await City.findAll({
           where: { 
             continent: continent,
@@ -43,7 +36,6 @@ router.get("/:country/:continent/:population/:price", async (req, res) => {
           }
         });
     } else if(country === "all" && continent === "all") {
-      console.log('INSIDE IF SCOPE!: ', 3)
         filteredCities = await City.findAll({
           where: {
             population: { [Op.gte]: population },
@@ -51,7 +43,6 @@ router.get("/:country/:continent/:population/:price", async (req, res) => {
           }
         })
     } else {
-      console.log('INSIDE IF SCOPE!: ', 4)
         filteredCities = await City.findAll({
           where: { 
             continent: continent,
