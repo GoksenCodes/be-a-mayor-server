@@ -29,7 +29,14 @@ router.get("/:country/:continent/", async (req, res) => {
           continent: req.params.continent,
         }
       });
-    } else {
+    } else if(req.params.country === 'all' && req.params.continent === 'all') {
+      filteredCities = await City.findAll({
+        where: {
+          population: { [Op.between]: [req.params.minvalue, req.params.maxvalue] }
+        }
+      })
+    } 
+    else {
       filteredCities = await City.findAll({
         where: { 
           continent: req.params.continent,
