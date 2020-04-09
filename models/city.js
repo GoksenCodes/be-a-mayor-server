@@ -38,10 +38,6 @@ module.exports = (sequelize, DataTypes) => {
 
   city.associate = function(models) {
     city.belongsTo(models.user);
-    city.belongsToMany(models.order, {
-      through: "orderitem",
-      foreignKey: "cityId"
-    });
   };
   return city;
 };

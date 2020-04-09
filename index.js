@@ -126,8 +126,8 @@ app.get("/", (req, res) => {
 app.post("/echo", (req, res) => {
   res.json({
     youPosted: {
-      ...req.body,
-    },
+      ...req.body
+    }
   });
 });
 
@@ -140,11 +140,11 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
 
   res.json({
     youPosted: {
-      ...req.body,
+      ...req.body
     },
     userFoundWithToken: {
-      ...user.dataValues,
-    },
+      ...user.dataValues
+    }
   });
 });
 
@@ -153,6 +153,9 @@ app.use("/", authRouter);
 
 const cityRouter = require("./routers/city");
 app.use("/cities", cityRouter);
+
+const orderRouther = require("./routers/order");
+app.use("/orders");
 
 // Listen for connections on specified port (default is port 4000)
 const { PORT } = require("./config/constants");
