@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   user.associate = function(models) {
-    user.hasMany(models.city);
+    user.hasMany(models.order);
   };
   return user;
 };
